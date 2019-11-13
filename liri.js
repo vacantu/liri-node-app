@@ -77,14 +77,13 @@ var option = inquirerResponse.choice;
                   if (err) {
                     return console.log('Error occurred: ' + err);
                   }
-                  //console.log("THIS IS DATA: ",JSON.parse(data));
                   //Artist(s)
                   // The song's name
                   // preview link of the song from Spotify
                   // The album that the song is from
-                console.log("ITEMS: ",data.tracks.items[1].artists.external_urls.spotify);
-                let songHref = data.tracks.href;
-                console.log(songHref);
+                  let baseObject = data.tracks.items[1];
+                  let previewLink = baseObject.external_urls.spotify;
+                console.log("SPOTIFY PREVIEW LINK:", previewLink);
                 let items = data.tracks.items[1];
                   //console.log(items);
               });           
