@@ -82,7 +82,9 @@ var option = inquirerResponse.choice;
                   // preview link of the song from Spotify
                   // The album that the song is from
                   let baseObject = data.tracks.items[1];
+                  let songName = baseObject.name;
                   let previewLink = baseObject.external_urls.spotify;
+                console.log("NAME OF THE SONG:", songName);  
                 console.log("SPOTIFY PREVIEW LINK:", previewLink);
                 let items = data.tracks.items[1];
                   //console.log(items);
